@@ -1,3 +1,4 @@
+const { describe, it, beforeEach } = require('node:test');
 const _assert = require('assert');
 const _formatter = require('../../lib/formatter');
 const _defaults = {
@@ -43,7 +44,7 @@ const _defaults = {
 describe('formatter', function() {
     let defaults = null;
 
-    beforeEach('set defaults', () => {
+    beforeEach(() => {
         defaults = _defaults;
     });
 

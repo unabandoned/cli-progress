@@ -1,10 +1,17 @@
-[![Build Status](https://travis-ci.org/npkgz/cli-progress.svg?branch=master)](https://travis-ci.org/npkgz/cli-progress)
-
 [Single Bar](#single-bar-mode) | [Multi Bar](#multi-bar-mode) | [Options](#options-1) | [Examples](examples/) | [Presets](presets/) | [Events](docs/events.md)
 
 CLI-Progress
 ============
 easy to use progress-bar for command-line/terminal applications
+
+> **This is a maintained fork of [cli-progress][upstream], published as
+> [`@unabandoned/cli-progress`][pkg].** Upstream's last release was 3.12.0 in
+> 2023. The API is unchanged; its one runtime dependency, `string-width`, is
+> kept current (it is ESM-only from v5 and loaded with `require()`, so the
+> fork needs Node.js 22.12 or newer). See [.unabandoned.yml](.unabandoned.yml).
+
+[upstream]: https://github.com/npkgz/cli-progress
+[pkg]: https://www.npmjs.com/package/@unabandoned/cli-progress
 
 ![Demo](assets/cli-progress.gif)
 
@@ -14,8 +21,14 @@ Install
 --------
 
 ```bash
-$ yarn add cli-progress
-$ npm install cli-progress --save
+$ npm install @unabandoned/cli-progress --save
+```
+
+To keep existing `require('cli-progress')` / `import ... from 'cli-progress'`
+call sites working unchanged, install it under the original name:
+
+```json
+"cli-progress": "npm:@unabandoned/cli-progress@^3.13.0"
 ```
 
 Features

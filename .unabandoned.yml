@@ -1,0 +1,29 @@
+schema: 1
+
+package: "@unabandoned/cli-progress"
+
+upstream:
+  repo: npkgz/cli-progress
+  reason: "no release since 3.12.0 in February 2023 and no commits since March 2023"
+
+summary: >-
+  Single and multi progress bars for command-line and terminal applications,
+  with presets, custom formatters and payload tokens.
+
+why-forked: >-
+  CyberChef uses it in its test runner, and it was abandoned while carrying a
+  runtime dependency pinned three majors behind, string-width ^4. The fork
+  moves string-width to its current major (ESM-only, loaded with require() on
+  Node 22.12+) so Renovate keeps the tree current, and swaps mocha and eslint
+  for node:test.
+
+used-by:
+  - consumer: TheTechNetwork/CyberChef
+    purpose: >-
+      draws the progress bar in the operation and Node API test runner
+      (tests/lib/TestRegister.mjs), a SingleBar with the shades_classic preset
+      and a custom format function showing the current test name
+
+status: active
+
+tags: [cli, terminal, progress-bar, tty]

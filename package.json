@@ -1,5 +1,5 @@
 {
-    "name": "cli-progress",
+    "name": "@unabandoned/cli-progress",
     "version": "3.12.0",
     "description": "easy to use progress-bar for command-line/terminal applications",
     "keywords": [
@@ -15,31 +15,38 @@
         "utility",
         "widget"
     ],
-    "homepage": "https://github.com/npkgz/cli-progress",
-    "bugs": "https://github.com/npkgz/cli-progress/issues",
-    "repository": "npkgz/cli-progress",
+    "homepage": "https://github.com/unabandoned/cli-progress#readme",
+    "bugs": {
+        "url": "https://github.com/unabandoned/cli-progress/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/unabandoned/cli-progress.git"
+    },
     "files": [
         "cli-progress.js",
         "lib/",
         "presets/"
     ],
     "scripts": {
-        "lint": "eslint lib/**.js",
-        "pretest": "npm run lint",
-        "test": "mocha test/**/*.test.js"
+        "test": "node --test \"test/**/*.test.js\"",
+        "prepare": "git config core.hooksPath .githooks || true"
     },
     "engines": {
-        "node": ">=4"
+        "node": ">=22.12"
     },
     "main": "./cli-progress.js",
     "author": "Andi Dittrich (https://andidittrich.com)",
     "license": "MIT",
     "dependencies": {
-        "string-width": "^4.2.3"
+        "string-width": "^8.3.0"
     },
     "devDependencies": {
-        "eslint": "^8.14.0",
-        "eslint-config-aenondynamics": "^0.2.0",
-        "mocha": "^9.2.2"
+        "@commitlint/cli": "21.2.2",
+        "@commitlint/config-conventional": "21.2.2"
+    },
+    "publishConfig": {
+        "access": "public",
+        "provenance": true
     }
 }
