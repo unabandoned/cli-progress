@@ -1,6 +1,6 @@
 {
     "name": "@unabandoned/cli-progress",
-    "version": "3.12.0",
+    "version": "3.13.0",
     "description": "easy to use progress-bar for command-line/terminal applications",
     "keywords": [
         "cli",
