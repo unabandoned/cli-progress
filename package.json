@@ -39,7 +39,7 @@
     "author": "Andi Dittrich (https://andidittrich.com)",
     "license": "MIT",
     "dependencies": {
-        "string-width": "^8.3.0"
+        "string-width": "^9.0.0"
     },
     "devDependencies": {
         "@commitlint/cli": "21.2.4",
